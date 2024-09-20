@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dota 2</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#heroes">Герои</a></li>
+                <li><a href="#news">Новости</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+        <img src="images/doto.png" alt="Dota 2 Logo" class="dota-logo">
+    </header>
+    <section id="videos">
+        <div class="video-category">
+            <h2>Официальный трейлер</h2>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/SmnqsdeHFT0" title="Официальный трейлер Dota 2" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="video-category">
+            <h2>Геймплей и стратегии</h2>
+            <div class="video">
+                <iframe src="https://www.youtube.com/watch?v=H9H5AGdHZJo" title="Геймплей и стратегии Dota 2" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="video-category">
+            <h2>Обновления и патчи</h2>
+            <div class="video">
+                <iframe src="https://www.youtube.com/watch?v=14qvTB53DJI" title="Обновления и патчи Dota 2" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="heroes">
+        <center>
+            <h2>Герои Dota 2</h2> <div class="hero-buttons">
+            </div>
+            <div>
+                <div></div>
+            </div>
+            <div id="strength-heroes" class="hero-category">
+                <div class="heroes-header">
+                    <img src="https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/icons/hero_strength.png" alt="">
+                    <h3 style="color: #ff0000;">Герои Силы</h3> <!-- Добавить перед всеми секциями -->
+                </div>
+                <input type="text" id="searchBar" placeholder="Search for a hero...">
+                <div class="heroes-list"></div>
+            </div>
+            <div id="agility-heroes" class="hero-category">
+                <div class="heroes-header">
+                    <img src="https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="">
+                    <h3 style="color: #00ff00">Герои Ловкости</h3>            
+                </div>
+                <input type="text" id="searchBar" placeholder="Search for a hero...">
+                <div class="heroes-list"></div>
+            </div>
+            <div id="intelligence-heroes" class="hero-category">
+                <div class="heroes-header">
+                    <img src="https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/icons/hero_intelligence.png" alt="">
+                    <h3 style="color: #00ccff">Герои Интеллекта</h3>            
+                </div>
+                <input type="text" id="searchBar" placeholder="Search for a hero...">
+                <div class="heroes-list"></div>
+            </div>
+            <div id="universal-heroes" class="hero-category">
+                <div class="heroes-header">
+                    <img src="https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/icons/hero_universal.png" alt="">
+                    <h3 style="color: #cc00ff">Универсальные герои</h3>            
+                </div>
+                <input type="text" id="searchBar" placeholder="Search for a hero...">
+                <div class="heroes-list"></div>
+            </div>
+        </center>
+    </section>
+
+    <section id="news">
+        <h2>Последние Новости</h2>
+        <h3>Обновление патча 7.37c</h3>
+        <div class="news-article">
+            <img src="images/garpia.png" alt="Storm Harpy" class="news-image">
+            <div class="news-content">
+                <h3>Изменения нейтральных крипов</h3>
+                <p>Штормовая гарпия - Chain Lightning: расход маны увеличен с 50 до 60.</p>
+            </div>
+        </div>
+        <div class="news-article">
+            <img src="images/gleipnir.png" alt="Gleipnir" class="news-image">
+            <div class="news-content">
+                <h3>Изменение предметов</h3>
+                <p>Gleipnir: Бонус к здоровью уменьшен с 350 до 300. Eternal Chains: урон уменьшен со 180 до 165.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="tournament">
+        <h2>The International 2024</h2>
+        <article>
+            <img src="images/team_liquid.jpg" alt="" class="">
+            <div class="tournament-p">
+                <p>Результаты The International 2024 по Dota 2 — Liquid чемпионы, Team Spirit вне топ-8.</p>
+                <p>В Копенгагене завершился The International 2024 — главный турнир по игре Dota 2. На протяжении двух недель лучшие команды мира вели борьбу за престижный трофей и призовой фонд в размере $ 2,6 млн. Чемпионом стала шведская команда Team Liquid, обыграв в финале европейскую Gaimin Gladiators с Антоном dyrachYO Шкредовым в роли керри. Третье место заняла Tundra Esports, в которой выступает два игрока из России.</p>
+            </div>
+        </article>
+    </section>
+
+    <section id="contact">
+        <h2>Контакты</h2>
+        <form action="#" method="POST">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Сообщение:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+    </section>
+
+    <footer>
+        <section id="social-media">
+            <h2>Следите за нами</h2>
+            <div class="social-buttons">
+                <a href="https://x.com/dota2" target="_blank" class="social-button twitter">Twitter</a>
+                <a href="https://www.instagram.com/dota2/" target="_blank" class="social-button instagram">Instagram</a>
+                <a href="https://www.youtube.com/@dota2" target="_blank" class="social-button youtube">YouTube</a>
+            </div>
+        </section>  
+    </footer>
+    <center>
+    <div class="copy">
+        <p>&copy; 2024 Dota 2 Fan Site. Все права защищены.</p>
+    </div>
+    </center>
+</body>
+</html>
