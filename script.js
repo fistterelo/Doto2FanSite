@@ -133,74 +133,77 @@ document.addEventListener("DOMContentLoaded", function () {
     const agilityContainer = document.querySelector('#agility-heroes .heroes-list');
     const intelligenceContainer = document.querySelector('#intelligence-heroes .heroes-list');
     const universalContainer = document.querySelector('#universal-heroes .heroes-list');
-
-    // Функция для добавления героя в соответствующий контейнер
-    heroes.forEach(hero => {
-        const heroElement = document.createElement('div');
-        heroElement.classList.add('hero');
-    
-        // Присваиваем класс для имени героя в зависимости от атрибута
-        heroElement.innerHTML = `
-            <img src="${hero.imageUrl}" alt="${hero.name}">
-            <h4 class="name">${hero.name}</h4>
-        `;
-    
-        // Добавляем героя в соответствующий контейнер и назначаем класс для атрибута
-        switch (hero.attribute) {
-            case 'Strength':
-                heroElement.classList.add('strength');
-                strengthContainer.appendChild(heroElement);
-                break;
-            case 'Agility':
-                heroElement.classList.add('agility');
-                agilityContainer.appendChild(heroElement);
-                break;
-            case 'Intelligence':
-                heroElement.classList.add('intelligence');
-                intelligenceContainer.appendChild(heroElement);
-                break;
-            case 'Universal':
-                heroElement.classList.add('universal');
-                universalContainer.appendChild(heroElement);
-                break;
-        }
-    });
     
     heroes.forEach(hero => {
         const heroElement = document.createElement('div');
         heroElement.classList.add('hero');
     
-        // Присваиваем класс для имени героя в зависимости от атрибута
-        heroElement.innerHTML = `
-            <img src="${hero.imageUrl}" alt="${hero.name}">
-            <h4 class="name">${hero.name}</h4>
-        `;
+        const modal = document.createElement('div');
+        modal.classList.add('modal');
+        modal.id = `modal-${hero.name.replace(/\s+/g, '-').toLowerCase()}`;
     
-        // Добавляем героя в соответствующий контейнер и назначаем класс для атрибута
-        switch (hero.attribute) {
-            case 'Strength':
-                heroElement.classList.add('strength');
-                strengthContainer.appendChild(heroElement);
-                break;
-            case 'Agility':
-                heroElement.classList.add('agility');
-                agilityContainer.appendChild(heroElement);
-                break;
-            case 'Intelligence':
-                heroElement.classList.add('intelligence');
-                intelligenceContainer.appendChild(heroElement);
-                break;
-            case 'Universal':
-                heroElement.classList.add('universal');
-                universalContainer.appendChild(heroElement);
-                break;
-        }
-    });
+        const modalContent = document.createElement('div');
+        modalContent.classList.add('modal-content');
         
+        const close = document.createElement('span');
+        close.classList.add('close');
+        close.innerHTML = `&times;`;
+    
+        // Добавляем информацию о герое в модальное окно
+        modalContent.innerHTML = `
+            <h2>${hero.name}</h2>
+            <img src="${hero.imageUrl}" alt="${hero.name}">
+            <p><strong>Attribute:</strong> ${hero.attribute}</p>
+        `;
+        modalContent.appendChild(close);
+        modal.appendChild(modalContent);
+    
+        heroElement.innerHTML = `
+            <img src="${hero.imageUrl}" alt="${hero.name}">
+            <h4 class="name">${hero.name}</h4>
+        `;
+    
+        switch (hero.attribute) {
+            case 'Strength':
+                heroElement.classList.add('strength');
+                strengthContainer.appendChild(heroElement);
+                strengthContainer.appendChild(modal);
+                break;
+            case 'Agility':
+                heroElement.classList.add('agility');
+                agilityContainer.appendChild(heroElement);
+                agilityContainer.appendChild(modal);
+                break;
+            case 'Intelligence':
+                heroElement.classList.add('intelligence');
+                intelligenceContainer.appendChild(heroElement);
+                intelligenceContainer.appendChild(modal);
+                break;
+            case 'Universal':
+                heroElement.classList.add('universal');
+                universalContainer.appendChild(heroElement);
+                universalContainer.appendChild(modal);
+                break;
+        }
+    
+        heroElement.addEventListener('click', function () {
+            modal.style.display = "block";
+        });
+    
+        close.addEventListener('click', function () {
+            modal.style.display = "none";
+        });
+    
+        window.addEventListener('click', function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        });
+    });
 });
 
+// Обработчик формы
 document.addEventListener("DOMContentLoaded", function () {
-    // Обработчик формы
     const form = document.querySelector('form');
     form.addEventListener('submit', function (e) {
         e.preventDefault();
@@ -208,3 +211,4 @@ document.addEventListener("DOMContentLoaded", function () {
         alert(`Спасибо, ${name}, ваше сообщение отправлено!`);
     });
 });
+
