@@ -355,29 +355,36 @@ footer {
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4); /* Темный фон */
+    background: rgba(0, 0, 0, 0.85); /* Тёмный полупрозрачный фон */
+    backdrop-filter: blur(5px); /* Эффект размытия фона */
 }
 
 /* Контент модального окна */
 .modal-content {
-    background-color: white;
-    margin: 15% auto;
+    background: #1d1d1d; /* Тёмно-серый фон */
+    color: #f1f1f1; /* Светлый текст */
+    margin: 10% auto;
     padding: 20px;
-    border: 1px solid #888;
+    border: 2px solid #ba6c16; /* Оранжевое золотистое обрамление */
     width: 80%;
-    max-width: 500px;
-    text-align: center;
-    border-radius: 10px;
+    max-width: 600px;
+    text-align: left;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Глубокая тень */
+    border-radius: 12px; /* Плавные грани */
+    font-family: 'Roboto', sans-serif; /* Модный минималистичный шрифт */
+    position: relative;
 }
 
 /* Кнопка закрытия модального окна */
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
+    color: #ba6c16; /* Оранжевый цвет в стиле золота Dota 2 */
+    font-size: 32px;
     font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 .close:hover,
@@ -391,19 +398,26 @@ footer {
 .modal img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 8px;
+    border: 1px solid #555; /* Тонкая темная рамка */
     margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Объемная тень */
 }
 
 .modal h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 28px;
+    color: #ba6c16; /* Тот же золотистый цвет */
+    margin-bottom: 15px;
+    text-transform: uppercase; /* Заглавные буквы для эпичности */
+    border-bottom: 2px solid #ba6c16; /* Подчеркнутый заголовок */
+    padding-bottom: 10px;
 }
 
 .modal p {
     font-size: 16px;
+    line-height: 1.6;
+    color: #ccc; /* Более светлый серый для читабельности */
     margin-bottom: 10px;
-    color: #ffcc00;
 }
 
 /* Стили для кнопки */
