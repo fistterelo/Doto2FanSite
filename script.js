@@ -144,18 +144,14 @@ document.addEventListener("DOMContentLoaded", function () {
     
         const modalContent = document.createElement('div');
         modalContent.classList.add('modal-content');
-        
-        const close = document.createElement('span');
-        close.classList.add('close');
-        close.innerHTML = `&times;`;
     
         // Добавляем информацию о герое в модальное окно
         modalContent.innerHTML = `
+            <span class="close">&times</span>
             <h2>${hero.name}</h2>
             <img src="${hero.imageUrl}" alt="${hero.name}">
-            <p><strong>Attribute:</strong> ${hero.attribute}</p>
+            <p>Attribute: <strong>${hero.attribute}</strong></p>
         `;
-        modalContent.appendChild(close);
         modal.appendChild(modalContent);
     
         heroElement.innerHTML = `
@@ -186,21 +182,128 @@ document.addEventListener("DOMContentLoaded", function () {
                 break;
         }
     
+        // Открытие модального окна при клике на героя
         heroElement.addEventListener('click', function () {
             modal.style.display = "block";
         });
     
+        // Закрытие модального окна при клике на кнопку закрытия
+        const close = modal.querySelector('.close'); // Теперь ищем внутри конкретного модального окна
         close.addEventListener('click', function () {
             modal.style.display = "none";
         });
     
+        // Закрытие модального окна при клике вне его области
         window.addEventListener('click', function (event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
         });
     });
+    
 });
+
+// Функция для фильтрации героев
+function filterHeroes(container, searchInput) {
+    const searchTerm = searchInput.value.toLowerCase();
+    const heroes = container.querySelectorAll('.hero');
+    
+    heroes.forEach(hero => {
+        const name = hero.querySelector('.name').textContent.toLowerCase();
+        if (name.includes(searchTerm)) {
+            hero.style.display = "block";
+        } else {
+            hero.style.display = "none";
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Получаем ссылки на все контейнеры и поля поиска
+    const searchBarStrength = document.getElementById('searchBarStrength');
+    const searchBarAgility = document.getElementById('searchBarAgility');
+    const searchBarIntelligence = document.getElementById('searchBarIntelligence');
+    const searchBarUniversal = document.getElementById('searchBarUniversal');
+    
+    const strengthContainer = document.querySelector('#strength-heroes .heroes-list');
+    const agilityContainer = document.querySelector('#agility-heroes .heroes-list');
+    const intelligenceContainer = document.querySelector('#intelligence-heroes .heroes-list');
+    const universalContainer = document.querySelector('#universal-heroes .heroes-list');
+    
+    // Добавляем обработчики событий на поля поиска
+    searchBarStrength.addEventListener('input', function() {
+        filterHeroes(strengthContainer, searchBarStrength);
+    });
+    
+    searchBarAgility.addEventListener('input', function() {
+        filterHeroes(agilityContainer, searchBarAgility);
+    });
+    
+    searchBarIntelligence.addEventListener('input', function() {
+        filterHeroes(intelligenceContainer, searchBarIntelligence);
+    });
+    
+    searchBarUniversal.addEventListener('input', function() {
+        filterHeroes(universalContainer, searchBarUniversal);
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Функция для фильтрации героев
+    function filterHeroes(container, searchInput) {
+        const searchTerm = searchInput.value.toLowerCase();
+        const heroes = container.querySelectorAll('.hero');
+        
+        heroes.forEach(hero => {
+            const name = hero.querySelector('.name').textContent.toLowerCase();
+            if (name.includes(searchTerm)) {
+                hero.style.display = "block";
+            } else {
+                hero.style.display = "none";
+            }
+        });
+    }
+
+    // Получаем ссылки на все контейнеры и поля поиска
+    const searchBarStrength = document.getElementById('searchBarStrength');
+    const searchBarAgility = document.getElementById('searchBarAgility');
+    const searchBarIntelligence = document.getElementById('searchBarIntelligence');
+    const searchBarUniversal = document.getElementById('searchBarUniversal');
+    
+    const strengthContainer = document.querySelector('#strength-heroes .heroes-list');
+    const agilityContainer = document.querySelector('#agility-heroes .heroes-list');
+    const intelligenceContainer = document.querySelector('#intelligence-heroes .heroes-list');
+    const universalContainer = document.querySelector('#universal-heroes .heroes-list');
+    
+    // Добавляем обработчики событий на поля поиска
+    searchBarStrength.addEventListener('input', function() {
+        filterHeroes(strengthContainer, searchBarStrength);
+    });
+    
+    searchBarAgility.addEventListener('input', function() {
+        filterHeroes(agilityContainer, searchBarAgility);
+    });
+    
+    searchBarIntelligence.addEventListener('input', function() {
+        filterHeroes(intelligenceContainer, searchBarIntelligence);
+    });
+    
+    searchBarUniversal.addEventListener('input', function() {
+        filterHeroes(universalContainer, searchBarUniversal);
+    });
+
+    // Добавляем анимацию открытия и закрытия списка героев через кнопку
+    const heroCategories = document.querySelectorAll('.hero-category');
+
+    heroCategories.forEach(category => {
+        const toggleButton = category.querySelector('.toggle-button');
+        
+        toggleButton.addEventListener('click', function() {
+            category.classList.toggle('open'); // Переключаем класс open
+        });
+    });
+});
+
 
 // Обработчик формы
 document.addEventListener("DOMContentLoaded", function () {

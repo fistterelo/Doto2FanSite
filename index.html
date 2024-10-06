@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav style="padding-bottom: 15px;">
             <ul>
                 <li><a href="#home">Главная</a></li>
                 <li><a href="#heroes">Герои</a></li>
@@ -46,8 +46,9 @@
                 <div class="heroes-header">
                     <img src="https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/icons/hero_strength.png" alt="">
                     <h3 style="color: #ff0000;">Герои Силы</h3> <!-- Добавить перед всеми секциями -->
+                    <button class="toggle-button"></button> <!-- Кнопка для открытия/закрытия списка -->
                 </div>
-                <input type="text" id="searchBar" placeholder="Search for a hero...">
+                <input type="text" id="searchBarStrength" placeholder="Search for a hero...">
                 <div class="heroes-list">
                     
                 </div>
@@ -55,9 +56,10 @@
             <div id="agility-heroes" class="hero-category">
                 <div class="heroes-header">
                     <img src="https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="">
-                    <h3 style="color: #00ff00">Герои Ловкости</h3>            
+                    <h3 style="color: #00ff00">Герои Ловкости</h3>    
+                    <button class="toggle-button"></button> <!-- Кнопка для открытия/закрытия списка -->        
                 </div>
-                <input type="text" id="searchBar" placeholder="Search for a hero...">
+                <input type="text" id="searchBarAgility" placeholder="Search for a hero...">
                 <div class="heroes-list">
                     <div id="myModal" class="modal">
                         <div class="modal-content">
@@ -70,9 +72,10 @@
             <div id="intelligence-heroes" class="hero-category">
                 <div class="heroes-header">
                     <img src="https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/icons/hero_intelligence.png" alt="">
-                    <h3 style="color: #00ccff">Герои Интеллекта</h3>            
+                    <h3 style="color: #00ccff">Герои Интеллекта</h3>    
+                    <button class="toggle-button"></button> <!-- Кнопка для открытия/закрытия списка -->        
                 </div>
-                <input type="text" id="searchBar" placeholder="Search for a hero...">
+                <input type="text" id="searchBarIntelligence" placeholder="Search for a hero...">
                 <div class="heroes-list">
                     <div id="myModal" class="modal">
                         <div class="modal-content">
@@ -85,9 +88,10 @@
             <div id="universal-heroes" class="hero-category">
                 <div class="heroes-header">
                     <img src="https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/icons/hero_universal.png" alt="">
-                    <h3 style="color: #cc00ff">Универсальные герои</h3>            
+                    <h3 style="color: #cc00ff">Универсальные герои</h3>      
+                    <button class="toggle-button"></button> <!-- Кнопка для открытия/закрытия списка -->      
                 </div>
-                <input type="text" id="searchBar" placeholder="Search for a hero...">
+                <input type="text" id="searchBarUniversal" placeholder="Search for a hero...">
                 <div class="heroes-list">
                     <div id="myModal" class="modal">
                         <div class="modal-content">

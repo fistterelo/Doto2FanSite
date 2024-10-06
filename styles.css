@@ -149,15 +149,19 @@ section {
 }
 
 .heroes-header{
+    width: 300px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+}
+
+.heroes-header h3{
+    padding-bottom: 5px;
 }
 
 .heroes-header img{
     width: 25px;
     height: auto;
-    padding-top: 7px;
     padding-right: 3px;
 }
 
@@ -399,4 +403,37 @@ footer {
 .modal p {
     font-size: 16px;
     margin-bottom: 10px;
+    color: #ffcc00;
+}
+
+/* Стили для кнопки */
+.toggle-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    margin-left: 10px;
+    transition: transform 0.3s ease; /* Анимация для поворота */
+}
+
+.toggle-button::before {
+    content: "▼"; /* Иконка стрелки вниз */
+    display: inline-block;
+}
+
+/* Состояние открытого списка (стрелка вверх) */
+.hero-category.open .toggle-button::before {
+    transform: rotate(-180deg); /* Поворот стрелки на 180 градусов */
+}
+
+/* Анимация для раскрывающегося списка */
+.hero-category .heroes-list {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.hero-category.open .heroes-list {
+    max-height: 1000px; /* Достаточно большое значение для вместимости всего списка */
+    transition: max-height 0.5s ease-in;
 }
