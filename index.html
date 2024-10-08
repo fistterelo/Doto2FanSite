@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dota 2</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
+
 <body>
     <header>
         <nav style="padding-bottom: 15px;">
@@ -18,35 +21,48 @@
         </nav>
         <img src="images/doto.png" alt="Dota 2 Logo" class="dota-logo">
     </header>
-    
+
     <section id="videos">
         <div class="video-category">
             <h2>Официальный трейлер</h2>
             <div class="video">
-                <iframe src="https://www.youtube.com/embed/SmnqsdeHFT0" title="Официальный трейлер Dota 2" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/SmnqsdeHFT0" title="Официальный трейлер Dota 2"
+                    allowfullscreen></iframe>
             </div>
         </div>
     </section>
 
     <section id="heroes">
+        <button id="randomHeroButton" class="random-hero-btn">Выбрать случайного героя</button>
         <center>
-            <h2>Герои Dota 2</h2> <div class="hero-buttons"></div>
+            <h2>Герои Dota 2</h2>
+            <label for="difficulty">Сложность:</label>
+            <div id="difficulty" class="difficulty-selector">
+                <span class="diamond" data-level="1"></span>
+                <span class="diamond" data-level="2"></span>
+                <span class="diamond" data-level="3"></span>
+            </div>
+
+
+            <div class="hero-buttons"></div>
             <div id="strength-heroes" class="hero-category">
                 <div class="heroes-header">
-                    <img src="https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/icons/hero_strength.png" alt="">
-                    <h3 style="color: #ff0000;">Герои Силы</h3> <!-- Добавить перед всеми секциями -->
-                    <button class="toggle-button"></button> <!-- Кнопка для открытия/закрытия списка -->
+                    <img src="https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/icons/hero_strength.png"
+                        alt="">
+                    <h3 style="color: #ff0000;">Герои Силы</h3>
+                    <button class="toggle-button"></button>
                 </div>
                 <input type="text" id="searchBarStrength" placeholder="Search for a hero...">
                 <div class="heroes-list">
-                    
+
                 </div>
             </div>
             <div id="agility-heroes" class="hero-category">
                 <div class="heroes-header">
-                    <img src="https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="">
-                    <h3 style="color: #00ff00">Герои Ловкости</h3>    
-                    <button class="toggle-button"></button> <!-- Кнопка для открытия/закрытия списка -->        
+                    <img src="https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png"
+                        alt="">
+                    <h3 style="color: #00ff00">Герои Ловкости</h3>
+                    <button class="toggle-button"></button>
                 </div>
                 <input type="text" id="searchBarAgility" placeholder="Search for a hero...">
                 <div class="heroes-list">
@@ -60,9 +76,10 @@
             </div>
             <div id="intelligence-heroes" class="hero-category">
                 <div class="heroes-header">
-                    <img src="https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/icons/hero_intelligence.png" alt="">
-                    <h3 style="color: #00ccff">Герои Интеллекта</h3>    
-                    <button class="toggle-button"></button> <!-- Кнопка для открытия/закрытия списка -->        
+                    <img src="https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/icons/hero_intelligence.png"
+                        alt="">
+                    <h3 style="color: #00ccff">Герои Интеллекта</h3>
+                    <button class="toggle-button"></button>
                 </div>
                 <input type="text" id="searchBarIntelligence" placeholder="Search for a hero...">
                 <div class="heroes-list">
@@ -76,9 +93,10 @@
             </div>
             <div id="universal-heroes" class="hero-category">
                 <div class="heroes-header">
-                    <img src="https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/icons/hero_universal.png" alt="">
-                    <h3 style="color: #cc00ff">Универсальные герои</h3>      
-                    <button class="toggle-button"></button> <!-- Кнопка для открытия/закрытия списка -->      
+                    <img src="https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/icons/hero_universal.png"
+                        alt="">
+                    <h3 style="color: #cc00ff">Универсальные герои</h3>
+                    <button class="toggle-button"></button>
                 </div>
                 <input type="text" id="searchBarUniversal" placeholder="Search for a hero...">
                 <div class="heroes-list">
@@ -92,7 +110,7 @@
             </div>
         </center>
     </section>
-    
+
     <section id="news">
         <h2>Последние Новости</h2>
         <h3>Обновление патча 7.37c</h3>
@@ -115,10 +133,14 @@
     <section id="tournament">
         <h2>The International 2024</h2>
         <article>
-            <img src="images/team_liquid.jpg" alt="" class="">
+            <img src="images/team_liquid.jpg" alt="" class="tournament-img">
             <div class="tournament-p">
                 <p>Результаты The International 2024 по Dota 2 — Liquid чемпионы, Team Spirit вне топ-8.</p>
-                <p>В Копенгагене завершился The International 2024 — главный турнир по игре Dota 2. На протяжении двух недель лучшие команды мира вели борьбу за престижный трофей и призовой фонд в размере $ 2,6 млн. Чемпионом стала шведская команда Team Liquid, обыграв в финале европейскую Gaimin Gladiators с Антоном dyrachYO Шкредовым в роли керри. Третье место заняла Tundra Esports, в которой выступает два игрока из России.</p>
+                <p>В Копенгагене завершился The International 2024 — главный турнир по игре Dota 2. На протяжении двух
+                    недель лучшие команды мира вели борьбу за престижный трофей и призовой фонд в размере $ 2,6 млн.
+                    Чемпионом стала шведская команда Team Liquid, обыграв в финале европейскую Gaimin Gladiators с
+                    Антоном dyrachYO Шкредовым в роли керри. Третье место заняла Tundra Esports, в которой выступает два
+                    игрока из России.</p>
             </div>
         </article>
     </section>
@@ -144,14 +166,14 @@
                 <a href="https://www.instagram.com/dota2/" target="_blank" class="social-button instagram">Instagram</a>
                 <a href="https://www.youtube.com/@dota2" target="_blank" class="social-button youtube">YouTube</a>
             </div>
-        </section>  
+        </section>
     </footer>
     <center>
-    <div class="copy">
-        <p>&copy; 2024 Dota 2 Fan Site. Все права защищены.</p>
-    </div>
+        <div class="copy">
+            <p>&copy; 2024 Dota 2 Fan Site. Все права защищены.</p>
+        </div>
     </center>
 
-    <script src="script.js"></script>
 </body>
+
 </html>
