@@ -1,125 +1,124 @@
 const heroes = [
-    { name: "Alchemist", attribute: "Strength", difficulty: 2, imageUrl: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/alchemist_full.png" },
+    { name: "Alchemist", attribute: "Strength", difficulty: 1, imageUrl: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/alchemist_full.png" },
     { name: "Axe", attribute: "Strength", difficulty: 1, imageUrl: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/axe_full.png" },
     { name: "Bristleback", attribute: "Strength", difficulty: 1, imageUrl: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/bristleback_full.png" },
     { name: "Centaur Warrunner", attribute: "Strength", difficulty: 1, imageUrl: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/centaur_full.png" },
-    { name: "Chaos Knight", attribute: "Strength", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/chaos_knight.png" },
-    { name: "Dawnbreaker", attribute: "Strength", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/dawnbreaker.png" },
-    { name: "Doom", attribute: "Strength", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/doom_bringer.png" },
+    { name: "Chaos Knight", attribute: "Strength", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/chaos_knight.png" },
+    { name: "Dawnbreaker", attribute: "Strength", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/dawnbreaker.png" },
+    { name: "Doom", attribute: "Strength", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/doom_bringer.png" },
     { name: "Dragon knight", attribute: "Strength", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/dragon_knight.png" },
-    { name: "Earth Spirit", attribute: "Strength", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/earth_spirit.png" },
+    { name: "Earth Spirit", attribute: "Strength", difficulty:  3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/earth_spirit.png" },
     { name: "Earthshaker", attribute: "Strength", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/earthshaker.png" },
     { name: "Elder Titan", attribute: "Strength", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/elder_titan.png" },
     { name: "Huskar", attribute: "Strength", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/huskar.png" },
     { name: "Kunkka", attribute: "Strength", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/kunkka.png" },
-    { name: "Legion Commander", attribute: "Strength", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/legion_commander.png" },
-    { name: "Lifestealer", attribute: "Strength", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/life_stealer.png" },
-    { name: "Mars", attribute: "Strength", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/mars.png" },
-    { name: "Night Stalker", attribute: "Strength", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/night_stalker.png" },
+    { name: "Legion Commander", attribute: "Strength", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/legion_commander.png" },
+    { name: "Lifestealer", attribute: "Strength", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/life_stealer.png" },
+    { name: "Mars", attribute: "Strength", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/mars.png" },
+    { name: "Night Stalker", attribute: "Strength", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/night_stalker.png" },
     { name: "Ogre Magi", attribute: "Strength", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/ogre_magi.png" },
-    { name: "Omniknight", attribute: "Strength", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/omniknight.png" },
-    { name: "Primal Beast", attribute: "Strength", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/primal_beast.png" },
+    { name: "Omniknight", attribute: "Strength", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/omniknight.png" },
+    { name: "Primal Beast", attribute: "Strength", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/primal_beast.png" },
     { name: "Pudge", attribute: "Strength", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/pudge.png" },
-    { name: "Slardar", attribute: "Strength", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/slardar.png" },
+    { name: "Slardar", attribute: "Strength", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/slardar.png" },
     { name: "Spirit Breaker", attribute: "Strength", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/spirit_breaker.png" },
     { name: "Sven", attribute: "Strength", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/sven.png" },
     { name: "Tidehunter", attribute: "Strength", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/tidehunter.png" },
     { name: "Timbersaw", attribute: "Strength", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/shredder.png" },
     { name: "Tiny", attribute: "Strength", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/tiny.png" },
-    { name: "Treant Protector", attribute: "Strength", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/treant.png" },
-    { name: "Tusk", attribute: "Strength", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/tusk.png" },
+    { name: "Treant Protector", attribute: "Strength", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/treant.png" },
+    { name: "Tusk", attribute: "Strength", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/tusk.png" },
     { name: "Underlord", attribute: "Strength", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/abyssal_underlord.png" },
-    { name: "Undying", attribute: "Strength", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/undying.png" },
+    { name: "Undying", attribute: "Strength", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/undying.png" },
     { name: "Wraith King", attribute: "Strength", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/skeleton_king.png" },
-    { name: "Anti Mage", attribute: "Agility", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png" },
+    { name: "Anti Mage", attribute: "Agility", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png" },
     { name: "Arc Warden", attribute: "Agility", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/arc_warden.png" },
-    { name: "Bloodseeker", attribute: "Agility", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/bloodseeker.png" },
-    { name: "Bounty Hunter", attribute: "Agility", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/bounty_hunter.png" },
-    { name: "Clinkz", attribute: "Agility", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/clinkz.png" },
+    { name: "Bloodseeker", attribute: "Agility", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/bloodseeker.png" },
+    { name: "Bounty Hunter", attribute: "Agility", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/bounty_hunter.png" },
+    { name: "Clinkz", attribute: "Agility", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/clinkz.png" },
     { name: "Drow Ranger", attribute: "Agility", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/drow_ranger.png" },
-    { name: "Ember Spirit", attribute: "Agility", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/ember_spirit.png" },
-    { name: "Faceless Void", attribute: "Agility", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/faceless_void.png" },
-    { name: "Gyrocopter", attribute: "Agility", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/gyrocopter.png" },
+    { name: "Ember Spirit", attribute: "Agility", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/ember_spirit.png" },
+    { name: "Faceless Void", attribute: "Agility", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/faceless_void.png" },
+    { name: "Gyrocopter", attribute: "Agility", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/gyrocopter.png" },
     { name: "Hoodwink", attribute: "Agility", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/hoodwink.png" },
     { name: "Juggernaut", attribute: "Agility", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/juggernaut.png" },
     { name: "Luna", attribute: "Agility", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/luna.png" },
-    { name: "Medusa", attribute: "Agility", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/medusa.png" },
+    { name: "Medusa", attribute: "Agility", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/medusa.png" },
     { name: "Meepo", attribute: "Agility", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/meepo.png" },
     { name: "Monkey King", attribute: "Agility", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/monkey_king.png" },
     { name: "Morphling", attribute: "Agility", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/morphling.png" },
     { name: "Naga Siren", attribute: "Agility", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/naga_siren.png" },
-    { name: "Phantom Assasin", attribute: "Agility", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/phantom_assassin.png" },
+    { name: "Phantom Assasin", attribute: "Agility", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/phantom_assassin.png" },
     { name: "Phantom Lancer", attribute: "Agility", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/phantom_lancer.png" },
-    { name: "Razor", attribute: "Agility", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/razor.png" },
+    { name: "Razor", attribute: "Agility", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/razor.png" },
     { name: "Riki", attribute: "Agility", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/riki.png" },
     { name: "Shadow Fiend", attribute: "Agility", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/nevermore.png" },
     { name: "Slark", attribute: "Agility", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/slark.png" },
     { name: "Sniper", attribute: "Agility", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/sniper.png" },
-    { name: "Spectre", attribute: "Agility", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/spectre.png" },
+    { name: "Spectre", attribute: "Agility", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/spectre.png" },
     { name: "Templar Assasin", attribute: "Agility", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/templar_assassin.png" },
-    { name: "Terroblade", attribute: "Agility", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/terrorblade.png" },
+    { name: "Terroblade", attribute: "Agility", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/terrorblade.png" },
     { name: "Troll Warlord", attribute: "Agility", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/troll_warlord.png" },
     { name: "Ursa", attribute: "Agility", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/ursa.png" },
-    { name: "Viper", attribute: "Agility", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/viper.png" },
+    { name: "Viper", attribute: "Agility", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/viper.png" },
     { name: "Weaver", attribute: "Agility", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/weaver.png" },
     { name: "Ancient Apparition", attribute: "Intelligence", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/ancient_apparition.png" },
     { name: "Crystal Maiden", attribute: "Intelligence", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/crystal_maiden.png" },
-    { name: "Death Prophet", attribute: "Intelligence", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/death_prophet.png" },
+    { name: "Death Prophet", attribute: "Intelligence", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/death_prophet.png" },
     { name: "Disruptor", attribute: "Intelligence", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/disruptor.png" },
     { name: "Enchantress", attribute: "Intelligence", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/enchantress.png" },
     { name: "Grimstroke", attribute: "Intelligence", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/grimstroke.png" },
     { name: "Jakiro", attribute: "Intelligence", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/jakiro.png" },
     { name: "Keeper Of The Light", attribute: "Intelligence", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/keeper_of_the_light.png" },
-    { name: "Leshrac", attribute: "Intelligence", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/leshrac.png" },
+    { name: "Leshrac", attribute: "Intelligence", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/leshrac.png" },
     { name: "Lich", attribute: "Intelligence", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/lich.png" },
-    { name: "Lina", attribute: "Intelligence", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/lina.png" },
+    { name: "Lina", attribute: "Intelligence", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/lina.png" },
     { name: "Lion", attribute: "Intelligence", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/lion.png" },
-    { name: "Muerta", attribute: "Intelligence", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/muerta.png" },
-    { name: "Nature's Prophet", attribute: "Intelligence", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/furion.png" },
-    { name: "Necrophos", attribute: "Intelligence", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/necrolyte.png" },
-    { name: "Oracle", attribute: "Intelligence", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/oracle.png" },
-    { name: "Outworld Destroyer", attribute: "Intelligence", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/obsidian_destroyer.png" },
-    { name: "Puck", attribute: "Intelligence", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/puck.png" },
+    { name: "Muerta", attribute: "Intelligence", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/muerta.png" },
+    { name: "Nature's Prophet", attribute: "Intelligence", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/furion.png" },
+    { name: "Necrophos", attribute: "Intelligence", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/necrolyte.png" },
+    { name: "Oracle", attribute: "Intelligence", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/oracle.png" },
+    { name: "Outworld Destroyer", attribute: "Intelligence", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/obsidian_destroyer.png" },
+    { name: "Puck", attribute: "Intelligence", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/puck.png" },
     { name: "Pugna", attribute: "Intelligence", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/pugna.png" },
     { name: "Queen Of Pain", attribute: "Intelligence", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/queenofpain.png" },
     { name: "Rubick", attribute: "Intelligence", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/rubick.png" },
-    { name: "Silencer", attribute: "Intelligence", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/silencer.png" },
-    { name: "Skywrath Mage", attribute: "Intelligence", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/skywrath_mage.png" },
-    { name: "Storm Spirit", attribute: "Intelligence", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/storm_spirit.png" },
-    { name: "Techies", attribute: "Intelligence", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/techies.png" },
-    { name: "Tinker", attribute: "Intelligence", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/tinker.png" },
+    { name: "Silencer", attribute: "Intelligence", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/silencer.png" },
+    { name: "Skywrath Mage", attribute: "Intelligence", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/skywrath_mage.png" },
+    { name: "Storm Spirit", attribute: "Intelligence", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/storm_spirit.png" },
+    { name: "Tinker", attribute: "Intelligence", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/tinker.png" },
     { name: "Warlock", attribute: "Intelligence", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/warlock.png" },
     { name: "Witch Doctor", attribute: "Intelligence", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/witch_doctor.png" },
     { name: "Zeus", attribute: "Intelligence", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/zuus.png" },
     { name: "Abaddon", attribute: "Universal", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/abaddon.png" },
     { name: "Bane", attribute: "Universal", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/bane.png" },
-    { name: "Batrider", attribute: "Universal", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/batrider.png" },
+    { name: "Batrider", attribute: "Universal", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/batrider.png" },
     { name: "Beastmaster", attribute: "Universal", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/beastmaster.png" },
     { name: "Brewmaster", attribute: "Universal", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/brewmaster.png" },
-    { name: "Broodmother", attribute: "Universal", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/broodmother.png" },
-    { name: "Chen", attribute: "Universal", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/chen.png" },
+    { name: "Broodmother", attribute: "Universal", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/broodmother.png" },
+    { name: "Chen", attribute: "Universal", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/chen.png" },
     { name: "Clockwerk", attribute: "Universal", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/rattletrap.png" },
     { name: "Dark Seer", attribute: "Universal", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/dark_seer.png" },
     { name: "Dark Willow", attribute: "Universal", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/dark_willow.png" },
     { name: "Dazzle", attribute: "Universal", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/dazzle.png" },
-    { name: "Enigma", attribute: "Universal", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/enigma.png" },
+    { name: "Enigma", attribute: "Universal", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/enigma.png" },
     { name: "Invoker", attribute: "Universal", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/invoker.png" },
-    { name: "Io", attribute: "Universal", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/wisp.png" },
+    { name: "Io", attribute: "Universal", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/wisp.png" },
     { name: "Lone Druid", attribute: "Universal", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/lone_druid.png" },
-    { name: "Lycan", attribute: "Universal", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/lycan.png" },
+    { name: "Lycan", attribute: "Universal", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/lycan.png" },
     { name: "Magnus", attribute: "Universal", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/magnataur.png" },
     { name: "Marci", attribute: "Universal", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/marci.png" },
     { name: "Mirana", attribute: "Universal", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/mirana.png" },
-    { name: "Nyx Assassin", attribute: "Universal", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/nyx_assassin.png" },
-    { name: "Pangolier", attribute: "Universal", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/pangolier.png" },
+    { name: "Nyx Assassin", attribute: "Universal", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/nyx_assassin.png" },
+    { name: "Pangolier", attribute: "Universal", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/pangolier.png" },
     { name: "Phoenix", attribute: "Universal", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/phoenix.png" },
     { name: "Sand King", attribute: "Universal", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/sand_king.png" },
     { name: "Snapfire", attribute: "Universal", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/snapfire.png" },
     { name: "Techies", attribute: "Universal", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/techies.png" },
     { name: "Vengeful Spirit", attribute: "Universal", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/vengefulspirit.png" },
     { name: "Venomancer", attribute: "Universal", difficulty: 1, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/venomancer.png" },
-    { name: "Visage", attribute: "Universal", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/visage.png" },
-    { name: "Void Spirit", attribute: "Universal", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/void_spirit.png" },
+    { name: "Visage", attribute: "Universal", difficulty: 3, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/visage.png" },
+    { name: "Void Spirit", attribute: "Universal", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/void_spirit.png" },
     { name: "Windranger", attribute: "Universal", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/windrunner.png" },
     { name: "Winter Wyvern", attribute: "Universal", difficulty: 2, imageUrl: "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/winter_wyvern.png" },
 ];
@@ -241,7 +240,7 @@ document.addEventListener("DOMContentLoaded", function () {
     displayHeroes(0);
 });
 
-// Функция для фильтрации героев
+// поиск
 function filterHeroes(container, searchInput) {
     const searchTerm = searchInput.value.toLowerCase();
     const heroes = container.querySelectorAll('.hero');
@@ -257,7 +256,7 @@ function filterHeroes(container, searchInput) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Получаем ссылки на все контейнеры и поля поиска
+    // Ссылки на все контейнеры и поля поиска
     const searchBarStrength = document.getElementById('searchBarStrength');
     const searchBarAgility = document.getElementById('searchBarAgility');
     const searchBarIntelligence = document.getElementById('searchBarIntelligence');
@@ -268,7 +267,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const intelligenceContainer = document.querySelector('#intelligence-heroes .heroes-list');
     const universalContainer = document.querySelector('#universal-heroes .heroes-list');
 
-    // Добавляем обработчики событий на поля поиска
+    // Обработчики событий на поля поиска
     searchBarStrength.addEventListener('input', function () {
         filterHeroes(strengthContainer, searchBarStrength);
     });
@@ -287,7 +286,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Функция для фильтрации героев
+    // поиск
     function filterHeroes(container, searchInput) {
         const searchTerm = searchInput.value.toLowerCase();
         const heroes = container.querySelectorAll('.hero');
@@ -345,7 +344,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     const randomHeroButton = document.getElementById('randomHeroButton');
 
-    // Функция для выбора случайного героя
+    // Для случайного героя
     function getRandomHero() {
         const randomIndex = Math.floor(Math.random() * heroes.length);
         return heroes[randomIndex];
@@ -355,13 +354,13 @@ document.addEventListener("DOMContentLoaded", function () {
     randomHeroButton.addEventListener('click', function () {
         const randomHero = getRandomHero();
 
-        // Удаляем предыдущее модальное окно, если оно существует
+        // Удаление пред. модаль. окна для отображения этого
         const existingModal = document.getElementById('randomHeroModal');
         if (existingModal) {
             existingModal.remove();
         }
 
-        // Создаем новое модальное окно
+        // Новое модальное окно для кнопки рандома
         const modal = document.createElement('div');
         modal.classList.add('modal');
         modal.id = 'randomHeroModal';
@@ -397,8 +396,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-
-
 
 
 // Обработчик формы

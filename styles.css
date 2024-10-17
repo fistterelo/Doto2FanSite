@@ -14,7 +14,7 @@ h1, h2, h3, h4 {
 }
 
 p {
-    margin: 0 0 20px 0;
+    margin: 0 0 2   0px 0;
     font-size: 16px;
 }
 
@@ -49,7 +49,7 @@ a:hover {
     width: 100%; 
     max-width: 1200px;
     aspect-ratio: 16/9; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
 }
 
 .video iframe {
@@ -61,12 +61,12 @@ a:hover {
 
 button {
     font-family: 'Roboto', sans-serif;
-    background-color: #1e90ff;
+    background-color: #052549;
     color: #fff;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: pointer;    
     transition: background-color 0.3s;
 }
 
@@ -537,5 +537,3 @@ footer {
 .difficulty-container .diamond.active {
     background-color: #ffcc00; /* Цвет активного ромба */
 }
-
-
